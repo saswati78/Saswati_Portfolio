@@ -310,7 +310,9 @@ export function Portfolio() {
                   <div>
                     <p className="font-medium">LinkedIn</p>
                     <a 
-                      href="#" 
+                      href="https://www.linkedin.com/in/saswati-mohanty890/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-primary hover:text-primary-glow transition-smooth"
                     >
                       Connect on LinkedIn
@@ -325,7 +327,9 @@ export function Portfolio() {
                   <div>
                     <p className="font-medium">GitHub</p>
                     <a 
-                      href="#" 
+                      href="https://github.com/saswati78" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-primary hover:text-primary-glow transition-smooth"
                     >
                       View My Code
