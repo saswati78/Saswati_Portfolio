@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Portfolio Design System - Modern Tech Aesthetic */
+
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+    --surface: 0 0% 100%;
+    --surface-variant: 240 5% 96%;
+
+    /* Primary Brand Colors - Tech Indigo */
+    --primary: 231 48% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 231 48% 70%;
+    --primary-soft: 231 48% 95%;
+
+    /* Secondary Colors - Tech Purple */
+    --secondary: 260 40% 92%;
+    --secondary-foreground: 260 40% 15%;
+    --secondary-accent: 260 40% 70%;
+
+    /* Accent Colors */
+    --accent: 270 50% 88%;
+    --accent-foreground: 270 50% 15%;
+    --accent-bright: 270 50% 65%;
+
+    /* Neutral Palette */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 231 48% 60%;
+
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+
+    /* Cards & Popovers */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Design System Tokens */
+    --radius: 0.75rem;
+    --shadow-soft: 0 2px 8px -2px hsl(222 47% 11% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(222 47% 11% / 0.12);
+    --shadow-large: 0 8px 32px -8px hsl(222 47% 11% / 0.16);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--surface)) 0%, hsl(var(--surface-variant)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent-bright)), hsl(var(--primary-glow)));
+
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --animation-duration: 0.6s;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+  }
+
+  .dark {
+    /* Dark Mode Background & Surface */
+    --background: 222 47% 8%;
+    --foreground: 0 0% 95%;
+    --surface: 222 47% 10%;
+    --surface-variant: 222 47% 12%;
+
+    /* Dark Mode Primary Colors */
+    --primary: 231 48% 70%;
+    --primary-foreground: 222 47% 8%;
+    --primary-glow: 231 48% 80%;
+    --primary-soft: 231 48% 15%;
+
+    /* Dark Mode Secondary Colors */
+    --secondary: 260 40% 20%;
+    --secondary-foreground: 260 40% 85%;
+    --secondary-accent: 260 40% 65%;
+
+    /* Dark Mode Accent Colors */
+    --accent: 270 50% 20%;
+    --accent-foreground: 270 50% 85%;
+    --accent-bright: 270 50% 70%;
+
+    /* Dark Mode Neutral Palette */
+    --muted: 222 47% 12%;
+    --muted-foreground: 240 4% 65%;
+    --border: 222 47% 16%;
+    --input: 222 47% 16%;
+    --ring: 231 48% 70%;
+
+    /* Dark Mode Cards & Popovers */
+    --card: 222 47% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 222 47% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--surface)) 0%, hsl(var(--surface-variant)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent-bright)), hsl(var(--primary-glow)));
+
+    /* Dark Mode Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
+    --shadow-large: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn var(--animation-duration) ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--animation-duration) ease-out forwards;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Utility Classes */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Interactive Elements */
+  .card-hover {
+    @apply transition-smooth hover:shadow-medium hover:-translate-y-1 hover:scale-[1.02];
+  }
+
+  .button-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .button-glow::before {
+    @apply absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-12 transition-transform duration-700;
+    content: '';
+  }
+
+  .button-glow:hover::before {
+    @apply translate-x-[100%];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .border-gradient {
+    background: var(--gradient-primary);
+    background-clip: padding-box;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--primary) / 0.4);
+  }
+}
