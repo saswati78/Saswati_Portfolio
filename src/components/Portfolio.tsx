@@ -73,6 +73,14 @@ export function Portfolio() {
       demo: "#"
     },
     {
+      title: "Smart ICU Monitoring System",
+      description: "Real-time web-based dashboard for monitoring critical ICU patient vitals with ESP32 sensors. Features live visualization of heart rate, SPO2, temperature, and ECG with ML-powered early risk prediction.",
+      features: ["Real-time Monitoring", "ML Risk Prediction", "Live Data Visualization", "WebSocket Communication"],
+      technologies: ["ESP32", "Flask", "React", "WebSockets", "Python", "Machine Learning", "IoT"],
+      github: "https://github.com/saswati78/smart_icu_monitoringSystem",
+      demo: "#"
+    },
+    {
       title: "Object Detection & Lane Tracking",
       description: "Advanced computer vision system using ESP32 and OpenCV for real-time object detection and lane tracking, designed for autonomous vehicle applications.",
       features: ["Real-time Processing", "ESP32 Integration", "Computer Vision", "IoT Communication"],
