@@ -69,7 +69,7 @@ export function Portfolio() {
       description: "A comprehensive health tracking application for women with PCOS/PCOD, featuring symptom logging, ML-powered predictions, and personalized lifestyle recommendations.",
       features: ["Symptom Logging", "ML Predictions", "Responsive UI", "Lifestyle Tips"],
       technologies: ["HTML", "CSS", "JavaScript", "EJS", "Node.js", "Python", "Express"],
-      github: "#",
+      github: "https://github.com/saswati78/PCOS__PCOD__TRAKER",
       demo: "#"
     },
     {
@@ -85,7 +85,7 @@ export function Portfolio() {
       description: "Advanced computer vision system using ESP32 and OpenCV for real-time object detection and lane tracking, designed for autonomous vehicle applications.",
       features: ["Real-time Processing", "ESP32 Integration", "Computer Vision", "IoT Communication"],
       technologies: ["ESP32", "OpenCV", "Python", "Computer Vision", "IoT"],
-      github: "#",
+      github: "https://github.com/saswati78/objectDetectionAndLaneTracking",
       demo: "#"
     }
   ];
@@ -222,7 +222,12 @@ export function Portfolio() {
                     </div>
                     
                     <div className="flex gap-3 pt-4">
-                      <Button variant="outline" size="sm" className="transition-spring">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="transition-spring"
+                        onClick={() => window.open(project.github, '_blank')}
+                      >
                         GitHub
                       </Button>
                       <Button size="sm" className="button-glow transition-spring">
